@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="spigot-1.12.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Central/Minecraft/BuildTools Stuff/spigot-1.12.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="https://hub.spigotmc.org/javadocs/spigot/overview-summary.html" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../Central/Minecraft/BuildTools Stuff/spigot-1.12.2.jar!/" />
+    </SOURCES>
+  </library>
+</component>

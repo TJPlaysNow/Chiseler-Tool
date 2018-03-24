@@ -1,0 +1,4 @@
+name: Chiseler-Tool
+version: 1.0
+main: com.tjplaysnow.chiselertool.main.PluginMain
+author: TJPlaysNow
