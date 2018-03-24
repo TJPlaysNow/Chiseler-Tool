@@ -135,6 +135,7 @@ public class PluginMain extends JavaPlugin {
                 return;
             }
             if (ItemManager.isEqual(event.getItem(), item)) {
+                event.setCancelled(true);
                 List<String> lore = event.getItem().getItemMeta().getLore();
                 String stringDamage = lore.get(0).replace("§7Uses: ", "");
                 stringDamage = stringDamage.replace("/" + config.getConfig().get("Chiseler.Durability"), "");
@@ -150,7 +151,6 @@ public class PluginMain extends JavaPlugin {
                     }
                 }
                 if (worked) {
-                    event.setCancelled(true);
                     Block block = event.getClickedBlock();
                     byte blockData = block.getData();
                     
@@ -165,6 +165,12 @@ public class PluginMain extends JavaPlugin {
                             blockData = 6;
                         } else
                         if (blockData == 9) {
+                            blockData = 0;
+                        } else {
+                            blockData++;
+                        }
+                    } else if (block.getType().equals(Material.REDSTONE_COMPARATOR) || block.getType().equals(Material.REDSTONE_COMPARATOR_OFF) || block.getType().equals(Material.REDSTONE_COMPARATOR_ON)) {
+                        if (blockData == 7) {
                             blockData = 0;
                         } else {
                             blockData++;
